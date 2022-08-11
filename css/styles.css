@@ -16,6 +16,16 @@
   --header-footer-color: #2f303a;
   --logo-black: #000000;
 }
+
+html{
+  box-sizing: border-box;
+}
+
+*
+*::before,
+*::after{
+  box-sizing: inherit;
+}
 body {
   background-color: var(--background-color);
   color: var(--primary-text-color);
@@ -24,8 +34,26 @@ body {
   font-size: 14px;
   line-height: 1.71;
 }
+
+
+h1, h2, h3, h4, p{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+ padding-left: 0;
+}
 ul {
   list-style: none;
+}
+img{
+  display: block;
+}
+address{
+  font-style: normal;
 }
 /* =======основна сторінка======== */
 /* logo */
@@ -41,6 +69,7 @@ ul {
   line-height: 1.2;
   color: var(--accent-color);
   cursor: pointer;
+  margin-right: 94px;
 }
 
 .logo-color.footer {
@@ -50,6 +79,25 @@ ul {
 .logo-color {
   color: var(--logo-black);
 }
+/* page header */
+.page-header{
+  background-color:#f5f4fa;
+  border: 2px solid coral
+}
+
+.header-container{
+display:flex;
+align-items: center;
+}
+
+.container{
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left:auto;
+  margin-right: auto;
+}
+
 
 /* site nav */
 
@@ -82,6 +130,26 @@ ul {
 .auth-nav .link-auth:focus {
   color: var(--accent-color);
 }
+
+.navigation{
+  display: flex;
+  align-items: center;
+}
+
+.site-nav{
+  display: flex;
+  align-items: center;
+}
+
+.auth-nav{
+  display: flex;
+  align-items: center;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 
 /* hero */
 .hero {
@@ -238,7 +306,6 @@ ul {
 
 /* footer */
 .footer-auth {
-  font-style: normal;
   color: var(--white-color);
   line-height: 24px;
   text-decoration: none;
@@ -246,7 +313,6 @@ ul {
 }
 
 .footer-auth.map {
-  font-style: normal;
   line-height: 24px;
   color: var(--white-color);
 }
