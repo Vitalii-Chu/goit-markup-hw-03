@@ -223,6 +223,8 @@ margin-right: 50px;
 
 .team {
   background-color: var(--background-second-color);
+  padding-top: 186px;
+  padding-bottom: 90px;
 }
 
 .team-pic {
