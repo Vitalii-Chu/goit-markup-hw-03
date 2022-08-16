@@ -16,6 +16,9 @@
   --header-footer-color: #2f303a;
   --logo-black: #000000;
   --header-line: #ececec;
+  --min-gap: 30px;
+  --main-gap: 94px;
+  --middle-gap: 50px;
 }
 
 html {
@@ -87,7 +90,7 @@ address {
   line-height: 1.2;
   color: var(--accent-color);
   cursor: pointer;
-  margin-right: 94px;
+  margin-right: var(--main-gap);
 }
 
 .logo-color.footer {
@@ -166,11 +169,11 @@ address {
 }
 
 .auth-item:not(:last-child) {
-  margin-right: 50px;
+  margin-right: var(--middle-gap);
 }
 
 .nav-item:not(:last-child) {
-  margin-right: 50px;
+  margin-right: var(--middle-gap);
 }
 
 /* hero */
@@ -187,7 +190,7 @@ address {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   padding-top: 200px;
-  margin-bottom: 30px;
+  margin-bottom: var(--min-gap);
 }
 
 .button-primary {
@@ -213,17 +216,10 @@ address {
   color: var(--button-hover-color);
 }
 /* about */
-.indent {
-  width: 270px;
-}
 
-.indent:not(:last-child) {
-  margin-right: 30px;
-}
-/* section */
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: var(--main-gap);
+  padding-bottom: var(--main-gap);
 }
 
 .section-about {
@@ -234,7 +230,7 @@ address {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
-  margin-bottom: 50px;
+  margin-bottom: var(--middle-gap);
   text-align: center;
 }
 
@@ -247,26 +243,33 @@ address {
   background-color: var(--background-second-color);
 }
 
-/* advantage */
-
 .advantage .tittle {
   color: var(--text-color-decoration);
 }
 
 .advantage {
   display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--min-gap));
+  margin-left: calc(-1 * var(--min-gap));
+}
+.indent {
+  flex-wrap: wrap;
+  flex-basis: calc(100% / 4 - 30px);
+  margin-top: var(--min-gap);
+  margin-left: var(--min-gap);
 }
 
 .images-work {
-  width: calc((100% - 3 * 30px) / 3);
+  width: calc((100% - 3 * var(--min-gap)) / 3);
 }
 
 .images-work:not(:nth-child(3n)) {
-  margin-right: 30px;
+  margin-right: var(--min-gap);
 }
 
 .images-work:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 30px;
+  margin-bottom: var(--min-gap);
 }
 
 .picture-work {
@@ -289,18 +292,18 @@ address {
 }
 
 .content-wrapper {
-  padding: 30px;
+  padding: var(--min-gap);
 }
 .team-pic {
   flex-basis: calc((100% - 90px) / 4);
 }
 
 .team-pic:not(:nth-child(4n)) {
-  margin-right: 30px;
+  margin-right: var(--min-gap);
 }
 
 .team-pic:not(:nth-last-child(-n + 4)) {
-  margin-bottom: 30px;
+  margin-bottom: var(--min-gap);
 }
 .text {
   margin-bottom: 10px;
@@ -389,7 +392,6 @@ address {
   border-radius: 4px;
   border: 1px solid var(--background-second-color);
   background-color: var(--background-second-color);
-  margin-bottom: 20px;
 }
 
 .button-secondary {
@@ -410,6 +412,7 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: var(--middle-gap);
 }
 
 .button-position:not(:last-child) {
@@ -437,15 +440,14 @@ address {
 .portfolio {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: 30px;
+  margin-left: calc(-1 * var(--min-gap));
+  margin-top: calc(-1 * var(--min-gap));
 }
 
 .portfolio-pic {
-  margin-left: 30px;
-  margin-top: 30px;
+  margin-left: var(--min-gap);
+  margin-top: var(--min-gap);
   flex-basis: calc((100 - 90) / 3);
- 
 }
 
 .link-pic {
@@ -454,7 +456,7 @@ address {
 }
 .portfolio-wrapper {
   padding: 20px 24px;
-  border: 1px solid #eeeeee;
+  outline: 1px solid #eeeeee;
 }
 /* footer */
 .footer-auth {
