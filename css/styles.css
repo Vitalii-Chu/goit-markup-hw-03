@@ -110,7 +110,6 @@ address {
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .container {
@@ -166,6 +165,7 @@ address {
 .auth-nav {
   display: flex;
   align-items: center;
+  margin-left: auto;
 }
 
 .auth-item:not(:last-child) {
@@ -180,17 +180,21 @@ address {
 .hero-section {
   background-color: var(--header-footer-color);
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-tittle {
   color: var(--white-color);
   font-weight: 900;
+  width: 696px;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding-top: 200px;
   margin-bottom: var(--min-gap);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button-primary {
@@ -202,13 +206,10 @@ address {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
+  letter-spacing: 0.06em;
   cursor: pointer;
   border-radius: 4px;
   border: 1px solid var(--accent-color);
-}
-
-.hero-button {
-  padding-bottom: 200px;
 }
 
 .button-primary:hover,
@@ -235,6 +236,7 @@ address {
 }
 
 .tittle {
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
 }
@@ -327,11 +329,13 @@ address {
   padding: 60px;
 }
 
-.footer-auth {
+.footer-adress {
   margin-top: 20px;
+}
+.footer-auth {
   margin-bottom: 9px;
 }
-.footer-item {
+.footer-item:not(:last-child) {
   margin-bottom: 9px;
 }
 /* ==========сторінка портфоліо============= */
@@ -380,6 +384,8 @@ address {
 .portfolio-auth {
   display: flex;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* button */
@@ -427,6 +433,7 @@ address {
   font-size: 18px;
   line-height: 2;
   text-decoration: none;
+  margin-bottom: 4px;
 }
 
 .paragraph-portfolio {
