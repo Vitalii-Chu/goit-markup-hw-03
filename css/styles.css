@@ -104,7 +104,7 @@ address {
 .page-header {
   padding-top: 24px;
   padding-bottom: 25px;
-  border: 1px solid var(--header-line);
+  border-bottom: 1px solid var(--header-line);
 }
 
 .header-container {
@@ -264,19 +264,15 @@ address {
 
 .images-work {
   width: calc((100% - 3 * var(--min-gap)) / 3);
-}
-
-.images-work:not(:nth-child(3n)) {
-  margin-right: var(--min-gap);
-}
-
-.images-work:not(:nth-last-child(-n + 3)) {
-  margin-bottom: var(--min-gap);
+  margin-top: var(--min-gap);
+  margin-left: var(--min-gap);
 }
 
 .picture-work {
   display: flex;
   flex-wrap: wrap;
+  margin-top:  calc(-1 * var(--min-gap));
+  margin-left: calc(-1 * var(--min-gap));
 }
 
 /* team */
